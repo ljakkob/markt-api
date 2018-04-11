@@ -1,0 +1,2 @@
+json: --format json -- out=logs/features.json
+ci: -p -- format progress - p json
