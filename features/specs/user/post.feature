@@ -5,7 +5,7 @@ Funcionalidade: Cadastro
     Posso solicitar uma requisição do tipo POST
     Para que os dados deste usuário sejam inseridos no sistema
 
-   
+   @cadastro
     Cenario: Cadastro simplificado
 
         Dado que o usuário informou os seguintes dados:
