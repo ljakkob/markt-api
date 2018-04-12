@@ -1,10 +1,10 @@
 Dado("que o usuário informou os seguintes dados:") do |table|
  puts @user = table.rows_hash
- HTTparty.get("http://marktasks.herokuapp.com/api/reset/#{@user['email']}?clean=full")
+ HTTParty.get("http://marktasks.herokuapp.com/api/reset/#{@user['email']}?clean=full")
   end
   
   Quando("eu faço uma solicitação POST para o serviço user") do
-   @result = HTTparty.post(
+   @result = HTTParty.post(
        'http://marktasks.herokuapp.com/api/user',
        headers: { 'Content-Type' => 'application/json'},
        body: @user.to_json)

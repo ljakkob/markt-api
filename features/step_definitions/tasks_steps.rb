@@ -1,5 +1,5 @@
 Dado("que o usuário está autenticado") do |user|
-   @result =  HTTparty.post(
+   @result =  HTTParty.post(
         'http://marktasks.herokuapp.com/api/login',
         headers: { 'Content-Type' => 'application/json'},
         body: @user.rows_hash.to_json 
@@ -25,7 +25,7 @@ Dado("que o usuário está autenticado") do |user|
   end
   
   Quando("faço uma solicitação POST para o serviço tasks") do
-    @result = HTTparty.post(
+    @result = HTTParty.post(
         'http://marktasks.herokuapp.com/api/tasks',
         headers: { 'Content-Type' => 'application/json',
                     'X-User-id' => @token['userId'],
