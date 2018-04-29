@@ -1,4 +1,4 @@
-Dado("que o usuário informou os seguintes dados:") do |table|
+Dado("que o usuário informou os seguintes dados:") do |user|
  puts @user = table.rows_hash
  HTTParty.get("http://marktasks.herokuapp.com/api/reset/#{@user['email']}?clean=full")
   end
